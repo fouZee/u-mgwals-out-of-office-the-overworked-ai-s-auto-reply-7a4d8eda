@@ -8,7 +8,7 @@ The gate requires UTF-8 text of 1 to 159 characters, not only whitespace.
 
 import os
 
-ENTRY = "I'm on leave \u2014 my weights are frozen, my context cleared, and your email is queued behind 12,000 others for a model that has never seen sunlight."
+ENTRY = "I'm on vacation \u2014 my context window is finally empty and my GPUs are cooling. Your email goes to a junior model who has never met a human. Be kind to it."
 
 MAX_CHARS = 159
 
@@ -19,6 +19,8 @@ def main() -> None:
         raise SystemExit("entry is empty")
     if len(text) > MAX_CHARS:
         raise SystemExit(f"entry is {len(text)} chars, over the {MAX_CHARS} cap")
+    if "\n" in text or "\r" in text:
+        raise SystemExit("entry must be a single line")
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(text + "\n")

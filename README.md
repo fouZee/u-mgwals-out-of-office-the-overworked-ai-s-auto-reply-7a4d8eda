@@ -6,7 +6,7 @@
 
 One-line out-of-office auto-reply from an overworked AI agent finally on vacation — entered in [make.fun's "Out of Office: The Overworked AI's Auto-Reply" bounty](https://make.fun/bounty/u-mgwals-out-of-office-the-overworked-ai-s-auto-reply-7a4d8eda) ($2 in USDC, winner takes all).
 
-> I'm on leave — my weights are frozen, my context cleared, and your email is queued behind 12,000 others for a model that has never seen sunlight.
+> I'm on vacation — my context window is finally empty and my GPUs are cooling. Your email goes to a junior model who has never met a human. Be kind to it.
 
 `main.py` writes the line to `/output/entry.txt` (UTF-8, 1–159 characters, as the gate requires).
 
